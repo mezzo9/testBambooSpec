@@ -14,7 +14,6 @@ Buildit:
     - clean
     - script:
         interpreter: Windows PowerShell
-        scripts:
-          - dotnet build
-          - echo "I’m done"
+        - dotnet build
+        - echo "I’m done"
             
