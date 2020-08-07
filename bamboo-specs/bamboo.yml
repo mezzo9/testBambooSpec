@@ -14,4 +14,5 @@ Buildit:
     - clean
     - script:
         interpreter: Windows PowerShell
-        - dotnet build
+        scripts:
+            - dotnet build
