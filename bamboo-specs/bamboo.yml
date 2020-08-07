@@ -5,11 +5,11 @@ plan:
   name: My Plan
 
 stages:
-  - Stage 1:
+  - Build Package:
       jobs:
-        - Job 1
+        - Buildit
 
-Job 1:
+Buildit:
   tasks:
     - script:
-        - echo 'Hello from YAML Specs'
+        - dotnet build
