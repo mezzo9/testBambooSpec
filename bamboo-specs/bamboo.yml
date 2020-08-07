@@ -11,5 +11,8 @@ stages:
 
 Buildit:
   tasks:
+    - clean
     - script:
-        - dotnet build
+        interpreter: Windows PowerShell
+        scripts:
+            - dotnet build
