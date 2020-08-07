@@ -1,3 +1,4 @@
+---
 version: 2
 plan:
   project-key: CON
@@ -12,7 +13,6 @@ stages:
 Buildit:
   tasks:
     - clean
-    - scripts:
-        - dotnet build
-        - dotnet publish
-            
+    - script: dotnet build
+    - script: dotnet publish
+    
