@@ -12,5 +12,5 @@ stages:
 Buildit:
   tasks:
     - clean
-    - script: dotnet build
+    - script: dir
             
