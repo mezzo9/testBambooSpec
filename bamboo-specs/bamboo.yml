@@ -21,6 +21,3 @@ Buildit:
         artifacts:
             # Downloads all artifacts to the `/` directory
             - destination: buildStuff
-            # Downloads the artifact called `an artifact` to `subdirectory`
-            - name: bambooSpecTest.dll
-                destination: dlls
