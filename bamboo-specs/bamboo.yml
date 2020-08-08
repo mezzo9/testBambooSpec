@@ -1,21 +1,57 @@
 ---
-version: 2
-plan:
-  project-key: CON
-  key: PLAN
-  name: My Plan
-
-stages:
-  - Build Package:
-      jobs:
+    version: 2
+    plan:
+      project-key: CON
+      key: PLAN
+      name: My Plan
+    stages:
+    - Build Package:
+        manual: false
+        final: false
+        jobs:
         - Buildit
-
-Buildit:
-  tasks:
-    - clean
-    - script: dotnet build
-    - script: dotnet publish
-    - artifact-download:
-        - artifacts:
-            name: bambooSpecTest.dll
-
+    Buildit:
+      key: JOB1
+      tasks:
+      - checkout:
+          force-clean-build: 'true'
+      - script:
+          interpreter: BINSH_OR_CMDEXE
+          scripts:
+          - dotnet build
+      - script:
+          interpreter: BINSH_OR_CMDEXE
+          scripts:
+          - dotnet publish
+      - artifact-download:
+          artifacts:
+          - { bambooSpecTest.dll }
+    triggers:
+    - polling: 180
+    branches:
+      create: for-new-branch
+      delete:
+        after-deleted-days: 1
+        after-inactive-days: 30
+      link-to-jira: true
+    notifications:
+    - events:
+      - plan-failed
+      recipients:
+      - responsible
+      - watchers
+    labels: []
+    other:
+      concurrent-build-plugin: system-default
+    ---
+    version: 2
+    plan:
+      key: CON-PLAN
+    plan-permissions:
+    - roles:
+      - logged-in
+      - anonymous
+      permissions:
+      - view
+    ...
+    
