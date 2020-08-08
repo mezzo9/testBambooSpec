@@ -15,5 +15,7 @@ Buildit:
     - clean
     - script: dotnet build
     - script: dotnet publish
-    - artifact-download
+    - artifact-download:
+        - artifacts:
+            name: bambooSpecTest.dll
 
