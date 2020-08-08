@@ -16,7 +16,7 @@ Buildit:
     - script: dotnet build
     - script: dotnet publish
     - artifact-download:
-        source-plan: CON-PLAN
+        source-plan: CON-PLAN-JOB1
         # Allows you to configure multiple artifacts from
         artifacts:
             # Downloads all artifacts to the `/` directory
