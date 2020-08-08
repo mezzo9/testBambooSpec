@@ -15,4 +15,12 @@ Buildit:
     - clean
     - script: dotnet build
     - script: dotnet publish
-    
+    - artifact-download:
+        source-plan: CON-PLAN
+        # Allows you to configure multiple artifacts from
+        artifacts:
+            # Downloads all artifacts to the `/` directory
+            - destination: buildStuff
+            # Downloads the artifact called `an artifact` to `subdirectory`
+            - name: bambooSpecTest.dll
+                destination: dlls
