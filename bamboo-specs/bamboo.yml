@@ -25,7 +25,7 @@
           - dotnet publish
       - artifact-download:
           artifacts:
-          - { name: bambooSpecTest.dll }
+          - {}
     triggers:
     - polling: 180
     branches:
