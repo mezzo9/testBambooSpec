@@ -25,7 +25,10 @@
           - dotnet publish
       - artifact-download:
           artifacts:
-          - {}
+            - name 'bambooSpecTest.dll'
+              pattern: 'bambooSpecTest.dll'
+              shared: true
+              required: true
     triggers:
     - polling: 180
     branches:
