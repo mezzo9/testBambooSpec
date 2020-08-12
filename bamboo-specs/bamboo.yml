@@ -24,8 +24,8 @@
           scripts:
           - dotnet publish
       artifacts:
-        - name: 'bambooSpecTest.dll'
-          pattern: 'bambooSpecTest/bin/Debug/netstandard2.0/bambooSpecTest.dll'
+        - name: 'bambooSpecTest'
+          pattern: 'bambooSpecTest/bin/Debug/netstandard2.0/*.*'
           shared: true
           required: true
     triggers:
