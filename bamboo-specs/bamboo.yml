@@ -23,7 +23,7 @@
           interpreter: BINSH_OR_CMDEXE
           scripts:
           - dotnet publish
-      - artifacts:
+      artifacts:
         - name: 'bambooSpecTest.dll'
           pattern: 'bambooSpecTest.dll'
           shared: true
