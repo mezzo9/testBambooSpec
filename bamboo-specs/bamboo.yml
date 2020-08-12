@@ -23,14 +23,13 @@
           interpreter: BINSH_OR_CMDEXE
           scripts:
           - dotnet publish
-      - artifact-download:
-          artifacts:
-            - name: 'bambooSpecTest.dll'
-              pattern: 'bambooSpecTest.dll'
-              shared: true
-              required: true
+      - artifacts:
+        - name: 'bambooSpecTest.dll'
+          pattern: 'bambooSpecTest.dll'
+          shared: true
+          required: true
     triggers:
-    - polling: 180
+      - polling: 180
     branches:
       create: for-new-branch
       delete:

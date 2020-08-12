@@ -5,3 +5,8 @@
 /bambooSpecTest/obj/Debug/netstandard2.0
 /bambooSpecTest/.vs/bambooSpecTest
 /bambooSpecTest/obj
+.vs/bambooSpecTest/v16/.suo
+bambooSpecTest/bin/Debug/netstandard2.0/bambooSpecTest.deps.json
+bambooSpecTest/bin/Debug/netstandard2.0/bambooSpecTest.dll
+bambooSpecTest/bin/Debug/netstandard2.0/bambooSpecTest.pdb
+
